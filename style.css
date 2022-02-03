@@ -43,6 +43,7 @@ body {
     line-height: 80px;
     transition: .4s;
     font-size: 20px;
+    cursor: pointer;
 }
 
 .link a:hover,
@@ -87,7 +88,10 @@ body {
 }
 
 .home-section.active,
-.project-section.active {
+.project-section.active,
+.about-section.active,
+.skill-section.active,
+.contact-section {
     position: relative;
     opacity: 1;
     z-index: 8;
@@ -197,4 +201,235 @@ body {
     background: rgb(28, 16, 136);
     color: rgb(255, 255, 255);
     border-radius: 5px;
+}
+
+
+/*Project Edit END*/
+
+
+/*About Edit*/
+
+
+/* about-section */
+
+.about-section {
+    width: 100%;
+    min-height: 100vh;
+    padding: 150px 100px 0;
+    position: fixed;
+    top: 0;
+    opacity: 0;
+    transition: 1s;
+}
+
+.about {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 30% 65%;
+    grid-gap: 40px;
+}
+
+.about-img-container {
+    position: relative;
+}
+
+.about-info {
+    color: #fff;
+    opacity: 0.6;
+    font-size: 20px;
+    line-height: 40px;
+}
+
+.about-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.download-cv-btn {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-110%);
+    padding: 10px 20px;
+    color: #fff;
+    border: none;
+    font-size: 16px;
+    text-transform: capitalize;
+    cursor: pointer;
+    transition: .5s;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.download-cv-btn2 {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(30%);
+    padding: 10px 20px;
+    color: #fff;
+    border: none;
+    font-size: 16px;
+    text-transform: capitalize;
+    cursor: pointer;
+    transition: .5s;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.download-cv-btn:hover,
+.download-cv-btn2:hover {
+    background: #000;
+}
+
+
+/*About Edit END*/
+
+
+/*Skill Edit*/
+
+.skill-section {
+    position: relative;
+    margin: 100px 0;
+}
+
+.heading {
+    text-align: center;
+    font-size: 60px;
+    color: #fff;
+    text-transform: capitalize;
+    font-weight: 300;
+    margin-bottom: 100px;
+}
+
+.skill-container {
+    width: 95%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 100px;
+    color: #fff;
+}
+
+.skill-card {
+    position: relative;
+}
+
+.skill-img {
+    display: block;
+    margin: auto;
+    height: 200px;
+}
+
+.skill-name {
+    font-size: 30px;
+    font-weight: 300;
+    text-align: center;
+    text-transform: capitalize;
+    margin: 30px 0 20px;
+}
+
+.skill-info {
+    text-align: center;
+    opacity: 0.5;
+    font-size: 18px;
+    line-height: 30px;
+}
+
+.skill-level {
+    position: absolute;
+    top: 80px;
+    right: 0;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    border-radius: 50%;
+    border: 10px solid;
+}
+
+.skill-card:nth-child(1) .skill-level {
+    background: #ff4f4f28;
+    border-color: #ff4f4f;
+    color: #ff4f4f;
+}
+
+.skill-card:nth-child(2) .skill-level {
+    background: #4fa0ff28;
+    border-color: #4fa0ff;
+    color: #4fa0ff;
+}
+
+.skill-card:nth-child(3) .skill-level {
+    background: #ffed4f28;
+    border-color: #ffed4f;
+    color: #ffed4f;
+}
+
+.skill-card:nth-child(4) .skill-level {
+    background: #27459628;
+    border-color: #274596;
+    color: #274596;
+}
+
+.skill-card:nth-child(5) .skill-level {
+    background: #4fdfff28;
+    border-color: #4fdfff;
+    color: #4fdfff;
+}
+
+
+/*Skill Edit END*/
+
+
+/*Contact Edit*/
+
+.contact-section active {
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    transition: 1s;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(1fr);
+    grid-gap: 50px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 60%;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid #fff;
+    margin-bottom: 30px;
+    margin-left: 255px;
+    border-radius: 5px;
+    text-transform: capitalize;
+    color: #fff;
+    padding: 5px 10px;
+}
+
+::placeholder {
+    color: #fff;
+    text-align: center;
+}
+
+#msg {
+    height: 280px;
+    resize: none;
+    font-family: sans-serif;
+}
+
+.form-submit-btn {
+    background: #ff4f4f;
+    color: #fff;
+    text-transform: capitalize;
+    padding: 15px 40px;
+    display: block;
+    margin: auto;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
 }
