@@ -1,6 +1,7 @@
 const links = document.querySelectorAll('.link');
 const sections = document.querySelectorAll('section');
 
+//Scroll
 let activeLink = 0;
 
 links.forEach((link, i) => {
