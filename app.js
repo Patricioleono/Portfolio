@@ -1,20 +1,32 @@
-const links = document.querySelectorAll('.link');
-const sections = document.querySelectorAll('section');
+const home = document.querySelector("#home");
+const homeTarget = document.querySelector("#homeTarget");
+const project = document.querySelector("#project");
+const projectTarget = document.querySelector("#projectTarget");
+const about = document.querySelector("#about");
+const aboutTarget = document.querySelector("#aboutTarget");
+const contact = document.querySelector("#contact");
+const contactTarget = document.querySelector("#contactTarget");
 
-//Scrolls
-let activeLink = 0;
+//scroll to target
+home.addEventListener("click", () => {
+    homeTarget.scrollIntoView({
+        behavior: "smooth",
+    });
+});
 
-links.forEach((link, i) => {
-    link.addEventListener('click', () => {
-        if (activeLink != i) {
-            links[activeLink].classList.remove('active');
-            link.classList.add('active');
-            section[activeLink].classList.remove('active');
+project.addEventListener("click", () => {
+    projectTarget.scrollIntoView({
+        behavior: "smooth",
+    });
+});
 
-            setTimeout(() => {
-                activeLink = i;
-                sections[i].classList.add('active');
-            }, 1000);
-        }
-    })
-})
+about.addEventListener("click", () => {
+    aboutTarget.scrollIntoView({
+        behavior: "smooth",
+    });
+});
+contact.addEventListener("click", () => {
+    contactTarget.scrollIntoView({
+        behavior: "smooth",
+    });
+});
