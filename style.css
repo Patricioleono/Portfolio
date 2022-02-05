@@ -177,6 +177,7 @@ body {
 .project-btn {
     height: 40px;
     text-transform: capitalize;
+    text-align: center;
     font-size: 18px;
     border: none;
     background: #000;
@@ -197,17 +198,62 @@ body {
     opacity: 1;
 }
 
-.project-btn:hover {
-    background: rgb(28, 16, 136);
-    color: rgb(255, 255, 255);
-    border-radius: 5px;
+.btn-preview {
+    position: relative;
+    color: #fff;
+    z-index: 2;
+    line-height: 40px;
+    padding: 0;
+}
+
+.btn-preview:hover {
+    border: none;
+}
+
+.btn-preview:before,
+.btn-preview:after {
+    position: absolute;
+    content: "";
+    width: 0%;
+    height: 0%;
+    border: 2px solid;
+    z-index: -1;
+    transition: all 0.3s ease;
+}
+
+.btn-preview:before {
+    top: 0;
+    left: 0;
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+    border-top-color: #000;
+    border-left-color: #000;
+}
+
+.btn-preview:after {
+    bottom: 0;
+    right: 0;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    border-bottom-color: #000;
+    border-right-color: #000;
+}
+
+.btn-preview:hover:before,
+.btn-preview:hover:after {
+    border-color: #000;
+    height: 100%;
+    width: 100%;
+}
+
+.btn-git:hover {
+    color: black;
+    background: white;
+    border: 2px solid black;
 }
 
 
 /*Project Edit END*/
-
-
-/*About Edit*/
 
 
 /* about-section */
