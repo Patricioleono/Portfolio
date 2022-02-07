@@ -295,21 +295,6 @@ body {
     border-radius: 20px;
 }
 
-.download-cv-btn {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-110%);
-    padding: 10px 20px;
-    color: #fff;
-    border: none;
-    font-size: 16px;
-    text-transform: capitalize;
-    cursor: pointer;
-    transition: .5s;
-    background: rgba(0, 0, 0, 0.5);
-}
-
 .download-cv-btn2 {
     position: absolute;
     bottom: 20px;
